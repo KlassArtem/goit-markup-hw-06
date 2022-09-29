@@ -27,6 +27,7 @@
   --contact-form-field-placeholder-text-color: rgba(117, 117, 117, 0.5);
   -subscription-form-input-border-clr: rgba(255, 255, 255, 0.3);
   --btn-other-color: #188ce8;
+  --hero-btn-box-shadow: rgba(0, 0, 0, 0.15);
 }
 
 h1,
@@ -75,6 +76,18 @@ body {
   padding-right: 15px;
   margin-right: auto;
   margin-left: auto;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 /* Header */
 .header {
@@ -632,7 +645,7 @@ body {
 .modal {
   width: 528px;
   height: 581px;
-  background-color: var(--main-white-color);
+  background-color: var(--header-background-color);
   position: absolute;
   top: 50%;
   left: 50%;
@@ -776,11 +789,12 @@ body {
 .contact-form-checkbox:checked + .contact-form-checkbox-label::before {
   background-color: var(--accent-color);
   border-color: var(--accent-color);
-  background-image: url('../images/modal-icons/choose-mark-icon.svg');
+  background-image: url('../images/svgs/close-modal.svg#icon-close');
   background-repeat: no-repeat;
   background-position: center;
   background-size: 11px 8px;
 }
+
 .contact-form-checkbox:focus + .contact-form-checkbox-label::before {
   border: 2px solid var(--accent-color);
 }
@@ -812,8 +826,13 @@ body {
 .contact-form-btn:focus {
   background-color: var(--btn-other-color);
 }
-.modal-window {
-  padding-top: 40px;
-  padding-right: 30px;
-  padding-left: 30px;
+.contact-form-topic {
+  margin-top: 45px;
+}
+.contact-form-field {
+  margin-left: 30px;
+  margin-right: 30px;
+}
+.checkbox-icon::after {
+  background-image: url('../images/svgs/close-modal.svg');
 }
